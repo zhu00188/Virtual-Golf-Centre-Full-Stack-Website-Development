@@ -8,7 +8,7 @@ export default function MemberLogin() {
 
   return (
     <main className="min-h-[calc(100vh-7rem)] flex items-center justify-center bg-[color:var(--g50)]">
-      <div className="w-full max-w-2xl bg-white rounded-2xl shadow-md p-8">
+  <div className="w-full max-w-2xl bg-white rounded-3xl shadow-xl ring-1 ring-black/5 p-8">
         <div className="mx-auto">
           <h1 className="text-3xl font-bold text-emerald-900">Welcome back!</h1>
           <p className="mt-2 text-[15.5px] leading-8 text-slate-700">Enter your Credentials to access your account</p>
@@ -36,7 +36,7 @@ export default function MemberLogin() {
             </label>
 
             <div className="mt-2">
-              <button type="button" className="rounded-md bg-emerald-700 px-5 py-2 text-sm font-medium text-white shadow transition-colors duration-200 hover:bg-emerald-600 hover:shadow-md">Login</button>
+              <button type="button" className="btn">Login</button>
             </div>
 
             <div className="mt-4 text-sm text-center text-slate-700">

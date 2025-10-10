@@ -38,16 +38,16 @@ function Icon({ name, href }: { name: "facebook"|"instagram"|"youtube"|"linkedin
 export default function SiteFooter() {
   return (
     <footer className="full-bleed bg-emerald-900/5">
-      <div className="mx-auto max-w-7xl px-12 pt-24 pb-8">
-        <div className="">
+      <div className="mx-auto max-w-7xl px-4 pt-8 pb-0">
+        <div className="rounded-xl border border-emerald-900/10 bg-white/70 p-6 shadow-sm">
           <div className="grid gap-8 md:grid-cols-3">
             <div>
               <h4 className="text-sm font-semibold text-emerald-900">Home</h4>
               <ul className="mt-3 space-y-2 text-emerald-900/80">
-                <li><Link href="/about" className="hover:underline">About Us</Link></li>
                 <li><Link href="/golf-bays" className="hover:underline">Golf Bays</Link></li>
-                <li><Link href="/booking" className="hover:underline">Booking</Link></li>
                 <li><Link href="/food" className="hover:underline">Food &amp; Drink</Link></li>
+                <li><Link href="/about" className="hover:underline">About Us</Link></li>
+                <li><Link href="/dashboard" className="hover:underline">Booking Dashboard</Link></li>
               </ul>
             </div>
 
@@ -64,12 +64,12 @@ export default function SiteFooter() {
               <h4 className="text-sm font-semibold text-emerald-900">Sign Up For Offers + Updates</h4>
               <p className="mt-3 text-sm text-emerald-900/80">Become a member today and unlock exclusive welcome perks, first-time bay offers, food and drink savings, and regular updates on what’s new at Celtic Virtual Golf.</p>
               <div className="mt-4">
-                <Link href="/signup" className="rounded-md border border-emerald-700 bg-white px-4 py-2 text-sm font-medium text-emerald-800 shadow transition hover:bg-emerald-600 hover:text-white hover:shadow-md">Join Us Now →</Link>
+                <Link href="/signup" className="btn">Join Us Now →</Link>
               </div>
             </div>
           </div>
 
-          <div className="mt-24 flex items-center justify-between border-t border-emerald-900/10 pt-4">
+          <div className="mt-6 flex items-center justify-between border-t border-emerald-900/10 pt-4">
             <p className="text-xs text-emerald-900/70">© 2025 Celtic Virtual Golf. All Rights Reserved</p>
             <div className="flex gap-2">
               <Icon name="facebook" href="https://www.facebook.com/celticvirtualgolf" />

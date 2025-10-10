@@ -256,23 +256,3 @@ footer.full-bleed{margin-bottom:0;padding-bottom:0}
   @apply rounded-3xl ring-1 ring-black/5 shadow-xl;
   background: linear-gradient(135deg,#f2f8ff 0%,#eaf6ff 100%);
 }
-
-/* Ensure the sticky header keeps a constant height and doesn't shrink on scroll */
-header, header.sticky, .site-header {
-  height: 4rem !important; /* 4rem == h-16 */
-  min-height: 4rem !important;
-  max-height: 4rem !important;
-  box-sizing: border-box;
-}
-
-header nav, header .nav, .site-header nav {
-  height: 4rem !important;
-  min-height: 4rem !important;
-  display: flex;
-  align-items: center;
-}
-
-/* Prevent transitions that could animate header height */
-header, header * {
-  transition-property: none !important;
-}

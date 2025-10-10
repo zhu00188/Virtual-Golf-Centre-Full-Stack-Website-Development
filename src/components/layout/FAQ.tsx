@@ -11,36 +11,28 @@ const FAQ_ITEMS = [
     a: `We’re open seven days a week. Hours vary by day and season — check the booking page for the most up-to-date schedule and available time slots.`,
   },
   {
-    q: "Do you offer lessons or coaching?",
-    a: `Yes — we offer coaching sessions and lessons with our pros. Head to the Booking or Services page for available instructors, pricing, and how to book a lesson.`,
-  },
-  {
     q: "Can I order food and drinks when I book a bay?",
     a: `Absolutely — you can pre-order food and drinks when reserving your bay, or order on arrival for on-site service. We support both pickup and table service options.`,
-  },
-  {
-    q: "What are your membership perks?",
-    a: `Members receive priority booking windows, welcome offers, and discounts on food & drink and coaching. Sign up to discover current membership tiers and benefits.`,
   },
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   function toggle(i: number) {
     setOpenIndex((prev) => (prev === i ? null : i));
   }
 
   return (
-    <section className="mx-auto max-w-7xl px-4 pt-12 pb-12">
-      <div className="mx-auto w-full max-w-6xl bg-white rounded-3xl px-12 py-12 shadow-md">
+    <section className="mx-auto max-w-7xl px-4 px-4 pb-12">
+      <div className="mx-auto w-full max-w-6xl bg-white rounded-3xl shadow-xl ring-1 ring-black/5 px-12 py-12 overflow-hidden">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           <div className="w-full lg:w-96 flex flex-col gap-6">
-            <h3 className="rttu-title">Frequently Asked Questions</h3>
-            <p className="text-sm leading-relaxed text-slate-800 lg:text-[15.5px] lg:leading-8">Need some help with your Celtic Virtual Golf experience or have questions? Click a question to reveal the answer, or send us a message and we’ll get back to you.</p>
+            <h3 className="heading-text">Frequently Asked Questions</h3>
+            <p className="text-sm leading-relaxed text-slate-700">Need some help with your Celtic Virtual Golf experience or have questions? Click a question to reveal the answer, or send us a message and we’ll get back to you.</p>
 
             <div>
-              <a href="/contact" className="rounded-md bg-emerald-700 px-5 py-2 text-sm font-medium text-white shadow transition-colors duration-200 hover:bg-emerald-600 hover:shadow-md">Send Us Message</a>
+              <a href="#" className="btn">Send Us Message</a>
             </div>
           </div>
 
@@ -54,7 +46,7 @@ export default function FAQ() {
                     onClick={() => toggle(i)}
                     className="w-full flex items-center justify-between py-4 text-left text-emerald-900 font-medium"
                   >
-                    <span className="flex-1 text-base">{item.q}</span>
+                    <span className="flex-1 text-sm leading-relaxed font-normal text-emerald-900">{item.q}</span>
                     <span className={`ml-4 transform transition-transform duration-200 ${openIndex === i ? "rotate-180" : "rotate-0"}`}>
                       <svg className="w-4 h-4 text-emerald-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
@@ -63,10 +55,10 @@ export default function FAQ() {
                   </button>
 
                   <div className={`${openIndex === i ? "block" : "hidden"} py-3`}>
-                    <p className="text-sm leading-relaxed text-slate-800 lg:text-[15.5px] lg:leading-8">{item.a}</p>
+                    <p className="text-sm leading-relaxed text-slate-700 font-normal">{item.a}</p>
                     {i === 0 && openIndex === 0 && (
-                      <div className="my-4">
-                        <a href="/booking" className="rounded-md bg-emerald-700 px-5 py-2 text-sm font-medium text-white shadow transition-colors duration-200 hover:bg-emerald-600 hover:shadow-md">Book Now</a>
+                        <div className="my-4">
+                        <a href="/booking" className="btn">Book Now</a>
                       </div>
                     )}
                   </div>
