@@ -25,6 +25,13 @@ This repository contains a full-stack web application built as a client-facing i
 
 1. Clone the repo.
 
+```
+powershell
+git clone https://github.com/zhu00188/Virtual-Golf-Centre-Full-Stack-Website-Development.git
+cd Virtual-Golf-Centre-Full-Stack-Website-Development
+npm install
+```
+
 2. Create `.env` with `DATABASE_URL` (and `SHADOW_DATABASE_URL` if using Prisma migrate dev with shadow DB).
 
 3. Prepare the database (generate client and run migrations):
@@ -66,3 +73,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
